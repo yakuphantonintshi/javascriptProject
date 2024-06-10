@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 *,
 *::after,
 *::before {
@@ -30,12 +31,6 @@ img {
     object-position: center;
 }
 
-/* .links{
-    float: left;
-}
-.info{
-    float: right;
-} */
 /* text-align: center */
 :is(h2){
     text-align: center;
@@ -67,4 +62,29 @@ ul>li {
 .copyrights{
     grid-column: 1/-1;
     text-align: center;
+}
+.home{
+    background-image: linear-gradient(to right, pink, rgb(239, 69, 208));
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr;
+    grid-template-rows: 2fr;
+}
+.home-pic{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.main_flower{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-weight: bold;
+}
+.home-btn{
+    background-color: rgb(221, 26, 140);
+    color: white;
+    
+
+}
+
+.startButton{
+   margin-left: 2rem;
 }
