@@ -43,11 +43,15 @@ img {
     text-align: center;
 }
 
+[product-footer]{
+    margin-top: 20rem;
+}
+
 footer {
+    
     display: grid;
     grid-template-rows: 200px 80px;
     grid-template-columns: repeat(3, 1fr);
-
 }
 
 
@@ -87,10 +91,15 @@ ul>li {
     grid-column: 2/3;
     grid-row: 1/2;
     font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    text-justify: auto;
 }
 .home-btn{
     background-color: rgb(221, 26, 140);
     color: white;
+    width: 100px;
+    float: right;
     
 
 }
@@ -119,7 +128,16 @@ ul>li {
     background-image: linear-gradient(to right, pink, rgb(249, 26, 178));
     margin-right: none;
 }
+
 .card{
-    display: flex;
-    height: 100%;
+    width: 18rem;
+    padding-top: 5px;
+}
+.nav-link{
+    color: rgb(232, 9, 131);
+    font-size: 20px;
+}
+#cartBtn{
+    background-image: linear-gradient( to right, rgb(223, 132, 171), rgb(235, 10, 145));
+    color: white;
 }
