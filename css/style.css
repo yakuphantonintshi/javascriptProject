@@ -20,9 +20,16 @@
 }
 
 body {
+    height: 100dvh;
+    width: 100%;
     display: grid;
     grid-template-rows: auto minmax(100%, 100dvh) auto;
 }
+
+
+
+
+    
 
 /* all images */
 img {
@@ -40,7 +47,10 @@ footer {
     display: grid;
     grid-template-rows: 200px 80px;
     grid-template-columns: repeat(3, 1fr);
+
 }
+
+
 
 ul>li {
     align-items: center;
@@ -64,7 +74,7 @@ ul>li {
     text-align: center;
 }
 .home{
-    background-image: linear-gradient(to right, pink, rgb(239, 69, 208));
+    background-image: linear-gradient(to right, pink, rgb(239, 69, 208)); 
     display: grid;
     grid-template-columns: 3fr 2fr 2fr;
     grid-template-rows: 2fr;
@@ -87,4 +97,29 @@ ul>li {
 
 .startButton{
    margin-left: 2rem;
+}
+.about{
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr;
+    grid-template-rows: 2fr;
+}
+.about-paragraph{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.about-pic{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    
+}
+.team-btn{
+    width: 150px;
+    height: 80px;
+    margin-top: 20px;
+    background-image: linear-gradient(to right, pink, rgb(249, 26, 178));
+    margin-right: none;
+}
+.card{
+    display: flex;
+    height: 100%;
 }
