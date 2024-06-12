@@ -86,6 +86,7 @@ ul>li {
 .home-pic{
     grid-column: 1/2;
     grid-row: 1/2;
+
 }
 .main_flower{
     grid-column: 2/3;
@@ -170,3 +171,46 @@ ul>li {
 [flowerProducts]{
     border: 2px solid rgb(212, 8, 114);
 }
+.badge{
+    background-color: rgb(213, 42, 111);
+    border-radius: 20%;
+}
+#hiddenDiv{
+    display: none;
+
+}
+
+.qlinks{
+    font-size: 15px;
+    font-weight:bold;
+
+}
+.create{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(214, 90, 163);
+    color: white;
+    margin-top: 10px;
+    float: right;
+}
+.delete{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(214, 90, 163);
+    color: white;
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+}
+.edit{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(214, 90, 163);
+    color: white;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+
+

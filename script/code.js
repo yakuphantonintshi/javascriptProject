@@ -2,7 +2,7 @@ let products = JSON.parse(localStorage.getItem('products')) ? JSON.parse(localSt
     [
         {
             productName: "Bearded Iris",
-            catergory: "Iris flower",
+            category: "Iris flower",
             Description: "Bearded Iris - Glacier Shadows - 3 plants p-pack",
             ImageUrl: "https://yakuphantonintshi.github.io/myimages/Images/bearded-iris.jpg",
             Price: 165.00

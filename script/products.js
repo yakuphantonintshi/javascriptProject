@@ -1,23 +1,10 @@
 let products =  JSON.parse(localStorage.getItem('products'))
-// products.forEach(product => {console.log(product.productName);})
 let container = document.querySelector('[flowerProducts]')
 
 
 let sortbtn = document.querySelector('#sort-btn');
 let searchbtn = document.querySelector('#search-btn');
 let itemsInp = document.querySelector('#productsInput');
-
-//Sorting by price
-// sortbtn.addEventListener('click', ()=>{
-//     if (itemsInp.value == ''){
-//         alert('No value entered')
-//         return
-//     }
-//     let price = parseFloat(itemsInp.value)
-//     let sortedItems = products.filter((a,b) => product.Price <= price);
-//     loadProductOnSite(sortedItems);
-// })
-
 
 function loadProductOnSite(products){
   container.innerHTML = ''
@@ -72,6 +59,25 @@ sortbtn.addEventListener('click', () => {
     }
 })
 
+let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
+    ? JSON.parse(localStorage.getItem('checkout'))
+    : []
+
+    function addToCart(products) {
+      try {
+          checkoutItems.push(products)
+          localStorage.setItem('checkout', JSON.stringify(checkoutItems))
+          document.querySelector('[counter]').textContent = checkoutItems.length || 0
+      } catch (e) {
+          alert("Unable to add to cart")
+      }
+  }
+
+  window.onload = () => {
+      document.querySelector('[counter]').textContent = checkoutItems.length || 0
+  }
+  
+
 
 
 
@@ -84,13 +90,14 @@ sortbtn.addEventListener('click', () => {
 
 
     // let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
-    //  ? JSON.parse(localStorage.getItem('checkout')) 
+    //  ? JSON.parse(localStorage.getItem('products')) 
     //  : []
+    
  
     // function addToCart(products) {
     //     try{
     //         checkoutItems.push(products) 
-    //         localStorage.setItem('checkout', JSON.stringify(checkoutItems))
+    //         localStorage.setItem('products', JSON.stringify(checkoutItems))
     //         document.querySelector('[counter]').textContent = checkoutItems.length || 0
     //     } catch(e){
     //         alert('Unable to add to cart')

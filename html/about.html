@@ -53,7 +53,7 @@
     
             </div>
             <div class="about-pic">
-                <img src="https://yakuphantonintshi.github.io/myimages/Images/my_picture2.jpg" height="450px" alt="image">
+                <img src="https://yakuphantonintshi.github.io/myimages/Images/my_picture2.jpg" height="300px" alt="image">
             
             <div>
               <button type="button" class="team-btn"
@@ -62,15 +62,30 @@
               </button>
     
             </div>
+            <div id="hiddenDiv">
+                <h2>Yakupha Ntonintshi</h2>
+                <p>She is the founder of the Blossom Company.</p>
+                <img src="https://yakuphantonintshi.github.io/myimages/Images/my_picture2.jpg" alt="My picture" width="300px" height="300px">
+
+                <h2>Khanya Pupuma</h2>
+                <p>He is the manager of the Blossom Company.</p>
+                <img src="https://yakuphantonintshi.github.io/myimages/Images/my_picture2.jpg" alt="My picture" width="300px" height="300px">
+
+                <h2>Khanya Pupuma</h2>
+                <p>He is the manager of the Blossom Company.</p>
+                <img src="https://yakuphantonintshi.github.io/myimages/Images/my_picture2.jpg" alt="My picture" width="300px" height="300px">
+
+
+            </div>
     
     
           </div>
           </div>
     </main>
-    <footer>
+    <footer class="about-footer">
         <div class="links">
           <ul>
-              <li>Quick Links:</li>
+              <li class="qlinks">Quick Links:</li>
               <li>Home</li>
               <li>About</li>
               <li>Admin</li>
@@ -80,7 +95,7 @@
         </div>
         <div class="locations">
           <ul>
-              <li>Locations:</li>
+              <li  class="qlinks">Locations:</li>
               <li>Cape Town</li>
               <li>Gauteng</li>
               <li>Johannesburg</li>
@@ -90,14 +105,14 @@
         </div>
         <div class="info">
           <ul>
-              <li>Contact Info:</li>
+              <li  class="qlinks">Contact Info:</li>
               <li>+27 62 507 0288</li>
               <li>yakupha58756@gmail.com</li>
               <li>58 Green Point Cape Town 7784</li>
           </ul>
         </div>
         <div class="copyrights">
-          <p> &copy;Copyright 2024-Yakupha Ntonintshi</p>
+          <p  class="qlinks"> &copy;Copyright 2024-Yakupha Ntonintshi</p>
         </div>
       </footer>
 
@@ -105,7 +120,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const teambtn = document.querySelector('.team-btn');
+    const hiddenDiv = document.querySelector('#hiddenDiv');
 
+    teambtn.addEventListener('click', () => {
+        if (hiddenDiv.style.display === 'none') {
+            hiddenDiv.style.display = 'block';
+        } else {
+            hiddenDiv.style.display = 'none';
+        }
+    });
+});
     </script>
 </body>
 </html>
