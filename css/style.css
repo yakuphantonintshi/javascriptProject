@@ -95,14 +95,14 @@ ul>li {
     font-style: italic;
     text-align: center;
     text-justify: auto;
+    width: 50vw;
 }
 .home-btn{
     background-color: rgb(221, 26, 140);
     color: white;
     width: 100px;
-    float: right;
+    float: inline-end;
     
-
 }
 
 .startButton{
@@ -112,10 +112,14 @@ ul>li {
     display: grid;
     grid-template-columns: 3fr 2fr 2fr;
     grid-template-rows: 2fr;
+    gap: 15px;
+    margin-left: 200px;
+    margin-top: 20px;
 }
 .about-paragraph{
     grid-column: 1/2;
     grid-row: 1/2;
+    font-size: 20px;
 }
 .about-pic{
     grid-column: 2/3;
@@ -128,6 +132,10 @@ ul>li {
     margin-top: 20px;
     background-image: linear-gradient(to right, pink, rgb(249, 26, 178));
     margin-right: none;
+}
+
+.about-footer{
+    margin-top: 15rem;
 }
 
 .card{
@@ -176,22 +184,20 @@ ul>li {
     border-radius: 20%;
 }
 #hiddenDiv{
-    display: none;
-
+    gap: 40px;
+    margin-left: 30px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
+   display: none;
+    
 }
 
 .qlinks{
     font-size: 15px;
     font-weight:bold;
 
-}
-.create{
-    width: 100px;
-    height: 50px;
-    background-color: rgb(214, 90, 163);
-    color: white;
-    margin-top: 10px;
-    float: right;
 }
 .delete{
     width: 100px;
@@ -211,6 +217,76 @@ ul>li {
     margin-top: 10px;
     margin-right: 10px;
 }
+[product-footer]{
+    margin-top: 25rem;
 
+}
+.contact{
+    background-color: rgb(219, 203, 209);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 700px;
+    height: 750px;
+    gap: 20px;
+    align-items: center;
+    margin-left: 500px;
+    border: 2px solid rgb(179, 40, 109);
 
-
+}
+.contact-input{
+    width: 250px;
+    height: 50px;
+    border: 10px;
+}
+.contact-message{
+    width: 300px;
+    height: 350px;
+}
+.contact-btn{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(214, 90, 163);
+    color: white;
+    border: 2px solid rgb(195, 55, 125);
+    
+}
+.contact-footer{
+    margin-top: 10rem
+}
+.contact-p{
+    color: rgb(7, 6, 7);
+}
+.h2-contact{
+    color: rgb(202, 53, 148);
+}
+.spinner {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    border-top-color: #000;
+    animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+/* Hide spinner initially */
+#spinner {
+    display: none;
+}
+.modal-body{
+    background-color: rgb(239, 132, 205);
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+}
+.modal-text{
+    width: 250px;
+    height: 40px;
+}
+#modal-btn{
+    background-color: rgb(191, 57, 131);
+}
