@@ -26,9 +26,11 @@ function loadProductOnSite(products){
 }
 loadProductOnSite(products)
 
+//search products
+
 searchbtn.addEventListener('click', () => {
   try {
-      if (itemsInp.value.length < 1) {
+      if (itemsInp.value.length > 1) {
         loadProductOnSite(products)
       }
       let filteredProduct = products.filter(product => product.productName.toLowerCase().includes(itemsInp.value))
@@ -59,6 +61,7 @@ sortbtn.addEventListener('click', () => {
     }
 })
 
+//Add to cart
 let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
     ? JSON.parse(localStorage.getItem('checkout'))
     : []
@@ -76,6 +79,9 @@ let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
   window.onload = () => {
       document.querySelector('[counter]').textContent = checkoutItems.length || 0
   }
+
+ 
+;
   
 
 
@@ -89,23 +95,4 @@ let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
 
 
 
-    // let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
-    //  ? JSON.parse(localStorage.getItem('products')) 
-    //  : []
     
- 
-    // function addToCart(products) {
-    //     try{
-    //         checkoutItems.push(products) 
-    //         localStorage.setItem('products', JSON.stringify(checkoutItems))
-    //         document.querySelector('[counter]').textContent = checkoutItems.length || 0
-    //     } catch(e){
-    //         alert('Unable to add to cart')
-    //     }
-    // }
-
-    // window.onload = () => {
-    //     document.querySelector('[counter]').textContent = JSON.parse(localStorage.getItem('checkout'))
-    //         ? JSON.parse(localStorage.getItem('checkout')).length
-    //         : 0
-    // }

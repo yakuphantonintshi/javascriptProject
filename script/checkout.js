@@ -1,3 +1,2 @@
-let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
-? JSON.parse(localStorage.getItem('checkout'))
-: []
+let products =  JSON.parse(localStorage.getItem('products'))
+let container = document.querySelector()
