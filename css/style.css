@@ -25,7 +25,9 @@ body {
     display: grid;
     grid-template-rows: auto minmax(100%, 100dvh) auto;
 }
-
+h1{
+    margin-bottom: 100px;
+}
 
 
 
@@ -96,6 +98,7 @@ ul>li {
     text-align: center;
     text-justify: auto;
     width: 50vw;
+    
 }
 .home-btn{
     background-color: rgb(221, 26, 140);
@@ -209,7 +212,7 @@ ul>li {
     margin-right: 10px;
     float: right;
 }
-.edit{
+.addNew{
     width: 100px;
     height: 50px;
     background-color: rgb(214, 90, 163);
@@ -230,7 +233,7 @@ ul>li {
     width: 700px;
     height: 750px;
     gap: 20px;
-    align-items: center;
+    padding-left: 10px;
     margin-left: 500px;
     border: 2px solid rgb(179, 40, 109);
 
@@ -239,10 +242,12 @@ ul>li {
     width: 250px;
     height: 50px;
     border: 10px;
+    padding-left: 10px;
 }
 .contact-message{
     width: 300px;
     height: 350px;
+    padding-left: 10px;
 }
 .contact-btn{
     width: 100px;
@@ -275,6 +280,13 @@ ul>li {
 }
 /* Hide spinner initially */
 #spinner {
+    background-color: rgb(244, 12, 155);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    width: 50px;
+    height: 50px;
     display: none;
 }
 .modal-body{
@@ -290,4 +302,20 @@ ul>li {
 }
 #modal-btn{
     background-color: rgb(191, 57, 131);
+}
+
+#edit-btn{
+    background-color: rgb(237, 57, 168);
+    width: 40px;
+}
+.delete-btn{
+    background-color: rgb(237, 57, 168);
+    width: 40px;
+}
+.heading{
+    background-color: pink;
+    text-decoration: underline;
+}
+.admin-footer{
+    margin-top: 30px;
 }
