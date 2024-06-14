@@ -7,8 +7,11 @@ let searchbtn = document.querySelector('#search-btn');
 let itemsInp = document.querySelector('#productsInput');
 
 function loadProductOnSite(products){
+  
   container.innerHTML = ''
   products.forEach(product => {
+
+    // console.log(product);
     container.innerHTML += `
     <div class="card" style="width: 18rem;" id="product">
     <img src="${product.ImageUrl}" class="card-img-top" alt="...">
@@ -16,7 +19,7 @@ function loadProductOnSite(products){
       <h5 class="card-title">${product.productName}</h5>
       <p class="card-description">${product.Description}</p>
       <p class="card-text">R ${product.Price}</p>
-      <a href="#" class="btn btn-primary" onclick="addToCart()" id="cartBtn" >Add to Cart</a>
+      <a href="#" class="btn btn-primary" id="${product.id}" addToCart >Add to Cart</a>
     </div>
   </div>`
 
@@ -62,12 +65,14 @@ sortbtn.addEventListener('click', () => {
 })
 
 //Add to cart
-let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
-    ? JSON.parse(localStorage.getItem('checkout'))
-    : []
 
     function addToCart(products) {
+
       try {
+        let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
+    ? JSON.parse(localStorage.getItem('checkout'))
+    : []
+          
           checkoutItems.push(products)
           localStorage.setItem('checkout', JSON.stringify(checkoutItems))
           document.querySelector('[counter]').textContent = checkoutItems.length || 0
@@ -75,6 +80,24 @@ let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
           alert("Unable to add to cart")
       }
   }
+
+  document.querySelectorAll("[addToCart]").forEach(button => {
+    button.addEventListener("click", ()=> {
+      try {
+          products.forEach(product => {
+            if (product.id == button.id) {
+              
+              
+              checkoutItems.push(product)
+              localStorage.setItem('checkout', JSON.stringify(checkoutItems))
+              document.querySelector('[counter]').textContent = checkoutItems.length || 0
+            }
+          })
+    } catch (e) {
+        alert("Unable to add to cart")
+    }
+    })
+  })
 
   window.onload = () => {
       document.querySelector('[counter]').textContent = checkoutItems.length || 0

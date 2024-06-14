@@ -52,12 +52,17 @@
             <h2 class="h2-contact" contactInfo>Get in Touch</h2>
             <p class="contact-p">It is always a pleasure to help you. <br> Talk to us and we shall help you</p>
             <input type="text" placeholder="Enter your name" class="contact-input">
-            <input type="email" placeholder="Enter your email address" class="contact-input">
+            <input type="email" placeholder="Enter your email address" class="contact-input" id="inputEmail">
             <input type="text" placeholder="What can we help you with" class="contact-message">
-            <button type="button" class="contact-btn">Send your message</button>
+            <button type="button" class="contact-btn" id="submitBtn">Send your message</button>
+
+            <i class="bi bi-facebook"></i><i class="bi bi-whatsapp"></i><i class="bi bi-linkedin"></i>
 
         </form>
-        <div id="spinner" class="spinner"><i class="bi bi-check-circle"></i></div>
+        <div id="spinner-container">
+
+            <div id="spinner" class="spinner"></i></div>
+        </div>
     </main>
     </main>
     <footer class="contact-footer">
@@ -91,6 +96,9 @@
         </div>
         <div class="copyrights">
           <p class="qlinks"> &copy;Copyright 2024-Yakupha Ntonintshi</p>
+          <i class="bi bi-whatsapp"></i>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-linkedin"></i>
         </div>
       </footer>
 
@@ -114,6 +122,31 @@
                 }, 4000); 
             });
         });
+document.querySelector('#submitBtn').addEventListener('click' , () => {
+    let nameInput = document.querySelector('.contact-input').value;
+    let emailInput = document.querySelector('#inputEmail').value;
+    let messageInput = document.querySelector('.contact-message').value;
+
+    if (nameInput == ''){
+        alert('Please enter your name.')
+        return
+    }
+    if (emailInput == ''){
+        alert('Enter email address')
+        return
+    }
+    if (messageInput == ''){
+        alert('Enter message please.')
+        return
+    }
+    alert('Thank you for your feedback' + '' + nameInput)
+
+
+})
+
+   
+   
+        
 
     </script>
 </body>
