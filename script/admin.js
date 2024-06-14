@@ -19,13 +19,14 @@ let prodCat = document.querySelector('#prodCat')
 let prodDescr = document.querySelector('#prodDescr')
 let prodImage = document.querySelector('#prodImg')
 let prodPrice = document.querySelector('#prodPrice')
+let deleteItem = document.querySelector('.delete')
 
 function Product(name, category, description, image, price){
-    this.name = name;
+    this.productName = name;
     this.category = category;
-    this.description = description;
-    this.image = image;
-    this.price = price;
+    this.Description = description;
+    this.ImageUrl = image;
+    this.Price = price;
 }
 btnSaveItem.addEventListener('click', ()=>{
     let name = prodName.value;
@@ -41,6 +42,10 @@ btnSaveItem.addEventListener('click', ()=>{
     localStorage.setItem('products' , JSON.stringify(products))
 
 
+})
+deleteItem.addEventListener('click' , () =>{
+    let indexToDelete = products.findIndex(products => products.productName === prodName)
+    products.splice(indexToDelete, 1)
 })
 
 

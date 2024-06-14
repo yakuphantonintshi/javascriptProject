@@ -141,6 +141,7 @@ ul>li {
 .card{
     width: 18rem;
     padding-top: 5px;
+    overflow-y: auto;
 }
 .nav-link{
     color: rgb(232, 9, 131);
